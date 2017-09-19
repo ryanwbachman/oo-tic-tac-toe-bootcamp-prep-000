@@ -1,4 +1,11 @@
 class TicTacToe
+  WIN_COMBINATIONS =
+  [
+    [0,1,2],[3,4,5],[6,7,8], # win by horizontal row
+    [0,3,6],[1,4,7],[2,5,8], # win by vertical column
+    [0,4,8],[2,4,6]          # win by diagonal
+  ]
+  
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
