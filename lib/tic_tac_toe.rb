@@ -98,6 +98,10 @@ class TicTacToe
     end
     nil
   end
+  
+  def input_to_index(user_input)
+    user_input.to_i - 1
+  end
 
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
