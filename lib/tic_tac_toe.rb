@@ -5,7 +5,7 @@ class TicTacToe
     [0,3,6],[1,4,7],[2,5,8], # win by vertical column
     [0,4,8],[2,4,6]          # win by diagonal
   ]
-  
+
   def initialize(board = nil)
     @board = board || Array.new(9, " ")
   end
@@ -18,7 +18,7 @@ class TicTacToe
       current_turn += 1
     end
     if won?
-      puts "Congratulations #{winner(board)}!"
+      puts "Congratulations #{winner(@board)}!"
     else
       puts "Cat's Game!"
     end
@@ -98,7 +98,7 @@ class TicTacToe
     end
     nil
   end
-  
+
   def input_to_index(user_input)
     user_input.to_i - 1
   end
